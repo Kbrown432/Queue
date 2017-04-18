@@ -1,21 +1,38 @@
-class Queue {
+class QDemo {
 	private int arr[];
-	private int i,j;
+	private int i;
+	public int length;
 
-	Queue(int size, int i, int j) {
+	QDemo(int size) {
 		arr = new int[size];
+		length = arr.length;
+		i = 0;
 		
+
 	}
 
-	public boolean push(int i, int c) {
-		if(i) {
-			arr[i] = c;
+	public boolean push(int s) {
+		if(i < arr.length) {
+			arr[i] = s;
+			i++;
 			return true;
 		}
 		return false;
 	}
 
-	public int pop() {
-		return i;
+}
+class Queue {
+	public static void main(String[] args) {
+		QDemo k = new QDemo(5);
+
+		for(int s = 0; s < k.length + 1; s++) {
+			if(k.push(s)) {
+				System.out.println("Victory is mine!!!!");
+			}
+			else{
+				System.out.println("Blast!!!!");
+			}
+		}
 	}
+
 }
