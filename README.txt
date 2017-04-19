@@ -1,0 +1,1 @@
+Krystal  did the push method and Rolea did  the pop method for the Queue.
